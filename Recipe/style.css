@@ -1,21 +1,28 @@
 h1{
     text-align: center;
     text-decoration: underline;
-    color: #6a921f; 
-
+    color: #A4A400; 
+    font-size: 22pt;
+    font-weight: bold;
 }
 h2{
-    color: #6a921f;
-
+    color: #A4A400;
+    font-family: Lucida Sans Unicode, Helvetica, Arial;
+    font-size: 18pt;
+    text-decoration: underline;
 }
 a:visited{
-    color: #668c1f;
+    color: #A4A400;
 }
 .h2{
-    background-color: #f0f0f0;
+    background-color: #F0F0F0;
+    font-size: 18pt;
+    text-decoration: underline;
 }
 .h1{
-    background-color: #f0f0f0;
+    background-color: #F0F0F0;
+    font-size: 18pt;
+    text-decoration: underline;
 }
 .comment{
  background-color: #fff670;
@@ -28,4 +35,43 @@ text-align: right;
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
+    background: white;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia,Garamond;
+}
+a{
+	color: #A4A400;
+}
+
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.replacable{
+	visibility: hidden;
+	position: relative;
+}
+.replacable:after{
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "pie!";
+}
+.footer{
+	float: left;
 }
