@@ -69,6 +69,20 @@ li{
 p{
   font-family: Arial;
 }
+p::first-letter{
+  font-size: 1.5em;
+  color: red;
+}
 h1{
   font-family: Verdana;
+}
+a{
+  text-decoration: none;
+  color: red;
+}
+.triggered{
+    display: none;
+}
+.trigger:hover .triggered{
+  display: block;
 }
