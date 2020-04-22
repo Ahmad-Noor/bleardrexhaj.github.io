@@ -45,7 +45,7 @@ a{
 	color: #A4A400;
 }
 ul{
-	list-style-image: url("/pie-icon.gif");
+	list-style-image: url("/Recipe/pie_icon.gif");
 }
 
 .tooltiptext {
