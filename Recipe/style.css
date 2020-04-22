@@ -48,6 +48,7 @@ body{
 a{
 	color: #A4A400;
 }
+
 ul{
 	list-style-image: url("/Recipe/pie_icon.gif");
 }
@@ -67,7 +68,7 @@ ul{
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
-  left: 15%;
+  left: 10%;
 }
 .replacable{
 	visibility: hidden;
