@@ -39,11 +39,14 @@ body{
     color: #404040;
     font-size: 11pt;
     font-family: Georgia,Garamond;
+    background-image: url("silverware.jpg"); 
 }
 a{
 	color: #A4A400;
 }
-
+ul{
+	list-style-image: url("/pie-icon.gif");
+}
 
 .tooltiptext {
   visibility: hidden;
