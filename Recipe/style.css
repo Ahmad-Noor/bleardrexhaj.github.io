@@ -4,12 +4,14 @@ h1{
     color: #A4A400; 
     font-size: 22pt;
     font-weight: bold;
+    margin: 0 0.25em;
 }
 h2{
     color: #A4A400;
     font-family: Lucida Sans Unicode, Helvetica, Arial;
     font-size: 18pt;
     text-decoration: underline;
+    margin: 0 0.25em;
 }
 a:visited{
     color: #A4A400;
@@ -18,11 +20,13 @@ a:visited{
     background-color: #F0F0F0;
     font-size: 18pt;
     text-decoration: underline;
+    margin: 0 0.25em;
 }
 .h1{
     background-color: #F0F0F0;
     font-size: 18pt;
     text-decoration: underline;
+    margin: 0 0.25em;
 }
 .comment{
  background-color: #fff670;
@@ -77,4 +81,7 @@ ul{
 }
 .footer{
 	float: left;
+}
+img{
+	margin-top: 1%;
 }
