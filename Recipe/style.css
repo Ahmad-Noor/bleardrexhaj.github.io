@@ -67,6 +67,7 @@ ul{
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  left: 15%;
 }
 .replacable{
 	visibility: hidden;
