@@ -1,0 +1,70 @@
+body{
+background-image: url("background.png");
+font-size: 8pt;
+font-style: Verdana, Tahoma;
+margin: 0;
+padding: 0;
+}
+#banner{
+display:block;
+background-image: url("bannerbg.png");
+}
+#banner img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 50px;
+}
+#h1-element{
+    text-align: center;
+    font-family: verdana,tahoma,"sans-serif";
+    font-size: 24pt bold;
+    text-shadow: 3px 3px #999999;
+}
+
+#bannerbg{
+    background-image: url('/bannerbg.png');
+    background-repeat: repeat-x;
+    height: 50px;
+}
+.outer-box{
+	border: 4px gray solid;
+	border-radius: 20px;
+	width: 70%;
+	display: flex;
+	margin: auto;
+}
+.inner-left-div{
+	width: 100%;
+	display: inline-block;
+}
+.inner-right-div img{
+	width: 100%;
+	border-radius: 16px;
+}
+
+.comments{
+	box-sizing: border-box;
+}
+.comment-box{
+	float: left;
+	width: 47%;
+	font-size: 8pt;
+	font-weight: bold;
+	background: #E8DC9B;
+	border: 2px;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+.comments:after{
+	content: "";
+	clear: both;
+}
+
+.profiles{
+	box-sizing: border-box;
+}
+.profile{
+	float: left;
+	width: 50%;
+}
