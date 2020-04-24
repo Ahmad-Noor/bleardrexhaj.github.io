@@ -1,0 +1,96 @@
+.body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.wapper{
+    display: grid;
+    margin: auto;
+    width: 100%;
+    border: 1px solid;
+    /* grid-gap: 20px; */
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: "header"
+    "menu"
+    "content"
+    "footer";
+}
+
+.top2-section{
+   /* grid-template-rows: 0px; */
+    margin: 0px;
+    padding: 0px;
+    /* display: grid; */
+    grid-area: menu;
+    display: flex;
+    height: 40px;
+    background-color: black;
+    color: white;
+    align-items: center;
+
+   
+}
+
+.top-section {
+    grid-area: header;
+    background-color: beige;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle {
+    grid-area: content;
+    display: grid;
+    min-height: 500px;
+    /* align-items: center;
+    justify-content: center; */
+    color: white;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.middle > .div-middle {
+    /* height: 100%; */
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    flex-wrap: wrap;
+    min-width: 200px; */
+}
+
+.middle > .div1 {
+    order: 1;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.middle > .div2 {
+    order: 2;
+    flex: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.middle > .div3 {
+    order: 3;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+    .middle {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+.footer {
+    grid-area: footer;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
