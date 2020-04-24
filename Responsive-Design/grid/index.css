@@ -37,8 +37,9 @@
 .middle {
     grid-area: content;
     display: grid;
-    min-height: 500px;
     color: white;
+    height: 100px;
+    width:100%;
     grid-template-columns: repeat(3, 1fr);
 
 }
@@ -61,7 +62,10 @@
 
 /* Screen larger than 600px? 2 column */
 @media (max-width: 600px) {
-  .middle { grid-template-columns: repeat(2, 1fr); }
+    .middle > .div2 {
+        grid-column: auto / span 2;
+    }
+    .middle { grid-template-columns: repeat(2, 1fr); }
 }
 
 .footer {
