@@ -45,7 +45,6 @@ section.top2-section{
 }
 .div1{
     background-color: #818182;
-    text-align: left;
 }
 .div2{
     background-color:#a9a9ab;
@@ -62,5 +61,11 @@ section.top2-section{
 @media screen and (max-width: 600px){
     .middle {
         display: flex;
-    }    
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .active{
+        order: -1;
+        flex: 1 0 50%;
+    }
 }
