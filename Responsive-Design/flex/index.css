@@ -63,9 +63,5 @@ section.top2-section{
 @media screen and (max-width: 600px){
     .middle {
         display: flex;
-        flex-direction: row;
-        flex-grow: 0;
-flex-shrink: 1;
-flex-basis: auto;
     }    
 }

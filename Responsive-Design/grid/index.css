@@ -22,8 +22,6 @@
     background-color: #0e3331;
     color: white;
     align-items: center;
-
-   
 }
 
 .top-section {
@@ -68,7 +66,6 @@
 @media (max-width: 600px) {
   .middle { grid-template-columns: repeat(2, 1fr); }
 }
-
 
 .footer {
     grid-area: footer;
