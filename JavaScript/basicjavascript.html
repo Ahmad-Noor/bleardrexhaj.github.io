@@ -34,12 +34,12 @@ function isVowel(c) {
     return ['a', 'e', 'i', 'o', 'u'].indexOf(c.toLowerCase()) !== -1;
 }
 
-/* takes one array and simplifies it into a single number*/
+/* takes one array and it returns the whole sum of it*/
 function sum(arr) {
     return arr.reduce((a,b)=>a+b);
 }
 
-/* takes one array and simplifies it into a single number*/
+/* takes one array and it returns the whole product of it*/
 function multiply(arr) {
     return arr.reduce((a,b)=>a*b);
 }
@@ -54,7 +54,7 @@ function findLongestWord(arr) {
     return arr.reduce((a,b)=>a.length>b.length ? a.length : b.length);
 }
 
-/* takes i and an array of filters all the elememts length that are longer than i*/
+/* takes i and an array of filters with all the elememts length that are longer than i*/
 function filterLongWords(arr, i) {
     return JSON.stringify(arr.filter((str)=>str.length > i));
 }
@@ -107,8 +107,8 @@ console.log("Expected a new array thay each of its element is multiplied by 10 a
 console.log("Expected a new array thay each of its element is will be filtered and will equal to three arr[2,2,3,3]: [3,3]\n" + myFunctionTest(equalToThree([2,2,3,3]), JSON.stringify([3,3])));
 console.log("Expected a new array thay each of its element is will be filtered and will equal to three arr[2,2,3,3]: [3,3]\n" + myFunctionTest(equalToThree([2,2,3,3]), JSON.stringify([2,3])));
 
-console.log("Expected multiply output for arr[2,2,3]: 12\n" + myFunctionTest(multiply([2,2,3]), 12));
-console.log("Expected multiply output for arr[2,2,3]: 12\n" + myFunctionTest(multiply([2,2,3]), 7));
+console.log("Expected multiply output for arr[2,2,3]: 12\n" + myFunctionTest(returnTheProduct([2,2,3]), 12));
+console.log("Expected multiply output for arr[2,2,3]: 12\n" + myFunctionTest(returnTheProduct([2,2,3]), 7));
 </script>
 </head>
 <body>
