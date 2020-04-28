@@ -1,8 +1,18 @@
 window.onload = function () {
 	alert("Hello, world!");
 
+
     const btnClick = function () {
-        var size = 0;
+        if(interval){
+            clearInterval(interval);
+            interval = 0;
+        } else {
+            interval = setInterval(textEnlarge, 500);
+        }
+    };
+
+    const textEnlarge = function () {
+    var size = 0;
         var textbox = document.getElementById('textarea');
         if (textbox.style.fontSize == '') {
             size = 12;
@@ -11,6 +21,8 @@ window.onload = function () {
         }
         textbox.style.fontSize = size + 2 + 'px';
     };
+
+    var interval;
 
     var btn = document.getElementById('button');
     btn.onclick = btnClick;
@@ -30,8 +42,6 @@ window.onload = function () {
             document.body.style.backgroundImage = '';
         }
     };
-
-     setInterval (btnClick, 500);
 
      document.getElementById('btni').onclick = function () {
      	var textbox = document.getElementById('textarea');
