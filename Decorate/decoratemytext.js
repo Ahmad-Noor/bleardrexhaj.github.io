@@ -30,5 +30,32 @@ window.onload = function () {
             document.body.style.backgroundImage = '';
         }
     };
+
      setInterval (btnClick, 500);
+
+     document.getElementById('btni').onclick = function () {
+     	var textbox = document.getElementById('textarea');
+     	var arr = textbox.value.split(' ');
+     	var arr1 = textbox.value.split(' ');
+
+     	arr = arr.filter((a)=>isVowel(a.charAt(0)));
+     	arr = arr.map((a)=>a.substring(1)+a.charAt(0)+'ay ');
+
+     	arr1 = arr1.filter((a)=>!isVowel(a.charAt(0)));
+     	arr1 = arr1.map((a)=>a+'ay ');
+
+     	arr = arr.join(' ');
+     	arr1 = arr1.join(' ');
+     	var finalArr = arr.concat(arr1);
+     	textbox.value = finalArr;
+    };
+    document.getElementById('btnm').onclick = function () {
+    	var textbox = document.getElementById('textarea');
+        var arr = textbox.value.split(' ');
+        textbox.value = arr.filter((a)=>a.length >= 5).map((a,i,array) => {return "Malkovitch"}).join(' ');
+    };
+}
+/* takes one char and returns true or false whether this char is vowel*/
+function isVowel(c) {
+    return ['a', 'e', 'i', 'o', 'u'].indexOf(c.toLowerCase()) !== -1;
 }
