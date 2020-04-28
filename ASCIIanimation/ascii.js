@@ -1,0 +1,94 @@
+//Defining of the interval;
+var animmation;
+
+//Defining i;
+var i = 0;
+
+//Changing the content of the textboxes.
+function change() {
+	stopButtonEvent();
+	var getSelected = document.getElementById('animation');
+	var getTextBox = document.getElementById('text-area');
+	if(getSelected.value === 'Blank'){
+		getTextBox.value = "BLANK";
+	} else if(getSelected.value === 'Exercise'){
+		getTextBox.value = ANIMATIONS["Exercise"];
+	} else if(getSelected.value === 'Juggler'){
+		getTextBox.value = ANIMATIONS["Juggler"];
+	} else if(getSelected.value === 'Bike'){
+		getTextBox.value = ANIMATIONS["Bike"];
+	} else if(getSelected.value === 'Dive'){
+		getTextBox.value = ANIMATIONS["Dive"];
+	}
+}
+
+//The function for starting the animation.
+function startButton(){
+	var getSelected = document.getElementById('animation');
+	if(getSelected.value === 'Blank'){
+		
+	} else if(getSelected.value === 'Exercise'){
+		startAnimation('Exercise');
+	} else if(getSelected.value === 'Juggler'){
+		startAnimation('Juggler');
+	} else if(getSelected.value === 'Bike'){
+		startAnimation('Bike');
+	} else if(getSelected.value === 'Dive'){
+		startAnimation('Dive');
+	}
+}
+
+//The function for starting the exercise animation.
+function startAnimation(str){
+	exerciseAnimation = ANIMATIONS[str];
+	exerciseAnimation = exerciseAnimation.split('=====');
+
+	animmation = setInterval(assignTextBox, 350, exerciseAnimation);
+	animationCheck();
+}
+
+//The function for adding events listeners and managing the stop/start operations;
+function animationCheck(){
+	var stopButton = document.getElementById('stop');
+	var startButton = document.getElementById('start');
+	var turbo = document.getElementById('turbo');
+	if(animmation){
+		var started = true;
+		startButton.disabled = true;
+		stopButton.disabled = false;
+		stopButton.addEventListener('click', stopButtonEvent);
+
+		turbo.addEventListener('click', function(){
+			if(turbo.checked && startButton.disabled != false){
+				clearInterval(animmation);
+				animmation = setInterval(assignTextBox, 100, exerciseAnimation);
+			} else if(startButton.disabled != false){
+				clearInterval(animmation);
+				animmation = setInterval(assignTextBox, 350, exerciseAnimation);
+				started = false;
+			}
+		});
+	}
+}
+
+//The function for Stoping the Animation;
+function stopButtonEvent(){
+	var startButton = document.getElementById('start');
+	var stopButton = document.getElementById('stop');
+	clearInterval(animmation);
+	startButton.disabled = false;
+	stopButton.disabled = true;
+}
+
+//The function for Assigning the text to the textbox;
+function assignTextBox(arr){
+	var getTextBox = document.getElementById('text-area');
+	getTextBox.value = '';
+	if(exerciseAnimation[i] == null) i = 0;
+	if(getTextBox.value === exerciseAnimation[i]){
+		getTextBox.value = exerciseAnimation[i+1];
+	} else {
+		getTextBox.value = exerciseAnimation[i];
+		i++;
+	}
+}
