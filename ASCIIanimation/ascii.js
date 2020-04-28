@@ -92,3 +92,21 @@ function assignTextBox(arr){
 		i++;
 	}
 }
+
+function changeTextSize(){
+	var getTextBox = document.getElementById('text-area');
+	var getFontBox = document.getElementById('fontsize');
+	if(getFontBox.value === 'Tiny'){
+		getTextBox.style.fontSize = '50%';
+	} else if(getFontBox.value === 'Small'){
+		getTextBox.style.fontSize = '60%';
+	} else if(getFontBox.value === 'Medium'){
+		getTextBox.style.fontSize = '70%';
+	} else if(getFontBox.value === 'Large'){
+		getTextBox.style.fontSize = '80%';
+	} else if(getFontBox.value === 'Extra Large'){
+		getTextBox.style.fontSize = '90%';
+	} else if(getFontBox.value === 'XXL'){
+		getTextBox.style.fontSize = '120%';
+	}
+}
