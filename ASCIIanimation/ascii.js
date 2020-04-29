@@ -41,8 +41,8 @@ function startButton(){
 //The function for starting the exercise animation.
 function startAnimation(str){
 	exerciseAnimation = ANIMATIONS[str];
-	exerciseAnimation = exerciseAnimation.split('=====');
-
+	exerciseAnimation = exerciseAnimation.split('=====\n');
+	
 	animmation = setInterval(assignTextBox, 350, exerciseAnimation);
 	animationCheck();
 }
