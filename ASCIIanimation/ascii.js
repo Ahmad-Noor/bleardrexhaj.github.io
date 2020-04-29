@@ -42,7 +42,7 @@ function startButton(){
 function startAnimation(str){
 	exerciseAnimation = ANIMATIONS[str];
 	exerciseAnimation = exerciseAnimation.split('=====\n');
-	
+
 	animmation = setInterval(assignTextBox, 350, exerciseAnimation);
 	animationCheck();
 }
@@ -93,6 +93,7 @@ function assignTextBox(arr){
 	}
 }
 
+//The function for Changing the textarea font size;
 function changeTextSize(){
 	var getTextBox = document.getElementById('text-area');
 	var getFontBox = document.getElementById('fontsize');
