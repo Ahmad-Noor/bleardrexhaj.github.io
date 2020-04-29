@@ -11,14 +11,8 @@ function change() {
 	var getTextBox = document.getElementById('text-area');
 	if(getSelected.value === 'Blank'){
 		getTextBox.value = "BLANK";
-	} else if(getSelected.value === 'Exercise'){
-		getTextBox.value = ANIMATIONS["Exercise"];
-	} else if(getSelected.value === 'Juggler'){
-		getTextBox.value = ANIMATIONS["Juggler"];
-	} else if(getSelected.value === 'Bike'){
-		getTextBox.value = ANIMATIONS["Bike"];
-	} else if(getSelected.value === 'Dive'){
-		getTextBox.value = ANIMATIONS["Dive"];
+	} else {
+		getTextBox.value = ANIMATIONS[getSelected.value];
 	}
 }
 
@@ -26,16 +20,10 @@ function change() {
 function startButton(){
 	var getSelected = document.getElementById('animation');
 	if(getSelected.value === 'Blank'){
-		
-	} else if(getSelected.value === 'Exercise'){
-		startAnimation('Exercise');
-	} else if(getSelected.value === 'Juggler'){
-		startAnimation('Juggler');
-	} else if(getSelected.value === 'Bike'){
-		startAnimation('Bike');
-	} else if(getSelected.value === 'Dive'){
-		startAnimation('Dive');
-	}
+// 
+} else {
+	startAnimation(getSelected.value);
+}
 }
 
 //The function for starting the exercise animation.
@@ -72,7 +60,7 @@ function animationCheck(){
 }
 
 //The function for Stoping the Animation;
-function stopButtonEvent(){
+function stopButtonEvent() {
 	var startButton = document.getElementById('start');
 	var stopButton = document.getElementById('stop');
 	clearInterval(animmation);
@@ -81,7 +69,7 @@ function stopButtonEvent(){
 }
 
 //The function for Assigning the text to the textbox;
-function assignTextBox(arr){
+function assignTextBox(arr) {
 	var getTextBox = document.getElementById('text-area');
 	getTextBox.value = '';
 	if(exerciseAnimation[i] == null) i = 0;
@@ -94,7 +82,7 @@ function assignTextBox(arr){
 }
 
 //The function for Changing the textarea font size;
-function changeTextSize(){
+function changeTextSize() {
 	var getTextBox = document.getElementById('text-area');
 	var getFontBox = document.getElementById('fontsize');
 	if(getFontBox.value === 'Tiny'){
