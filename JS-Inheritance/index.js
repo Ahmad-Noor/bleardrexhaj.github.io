@@ -50,6 +50,61 @@
             });
         });
     };
+    var Person = function() {};
+    Person.prototype.initialize = function(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype.describe = function() {
+        return this.name + ", " + this.age + " years old.";
+    } 
+
+    {
+        var Student = function() {};
+        Student.prototype = new Person();
+        Student.prototype.learn = function(subject) {
+            return this.name + " just learned " + subject;
+        }
+    } 
+
+    {
+        var Teacher = function() {};
+        Teacher.prototype = new Person();
+        Teacher.prototype.teach = function(subject) {
+            return this.name + " is now teaching " + subject;
+        }
+    }
+    /**
+     * Asserts the student result.
+     */
+    var studentAssert = function() {
+        var me = new Student();
+        me.initialize("Bleard", 22);
+        var found = me.learn("Inheritance");
+        var expected = 'Bleard just learned Inheritance';
+        context("Given Student Details: (" + me.describe() + ") after filtered should be: (" + expected + ')', function() {
+            it("the result is: " + found, function() {
+                assert.equal(expected, found);
+            });
+        });
+    };
+
+    /**
+     * Asserts the teacher result.
+     */
+    var teacherAssert = function() {
+        var me = new Teacher();
+        me.initialize("Keith", 35);
+        var found = me.teach("WAP");
+        var expected = 'Keith is now teaching WAP';
+        context("Given Teacher Details: (" + me.describe() + ") after filtered should be: (" + expected + ')', function() {
+            it("the result is: " + found, function() {
+                assert.equal(expected, found);
+            });
+        });
+    };
     arrayAssert();
     stringAssert();
+    studentAssert();
+    teacherAssert();
 })();
