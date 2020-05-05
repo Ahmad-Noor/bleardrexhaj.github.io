@@ -1,5 +1,5 @@
 class Clock {
-    constructor({template}) {
+    constructor(template) {
         this.template = template;
     }
     render() {
@@ -27,5 +27,5 @@ class Clock {
     }
 }
 
-let clock = new Clock({template: "h:m:s"});
+let clock = new Clock("h:m:s");
 clock.start();
