@@ -27,7 +27,6 @@ class Bank {
      */
     addSavingsAccount(interest) {
         let acc = new SavingsAccount(interest, this.Number);
-        acc.deposit(9000);
         this.Account.push(acc);
         let tmp = this.Number;
         this.Number++;
@@ -39,7 +38,6 @@ class Bank {
      */
     addCheckingAccount(overdraft) {
         let acc = new CheckingAccount(overdraft, this.Number);
-        acc.withdraw(900);
         this.Account.push(acc);
         let tmp = this.Number;
         this.Number++;
@@ -59,6 +57,12 @@ class Bank {
     	let str="";
     	this.Account.forEach(x => str+=x.toString()+"\n");
     	return str;
+    }
+    /**
+     * Exposes the array
+     */
+    getAccounts(){
+        return this.Account;
     }
     /**
      * Method for calling each main method at the end of the month

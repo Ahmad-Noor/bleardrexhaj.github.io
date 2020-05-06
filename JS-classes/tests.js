@@ -64,9 +64,9 @@ describe('Bank Class', function() {
 describe('Bank Class', function() {
   describe('End of the month', function() {
     it('Should expect Account , SavingsAccount 12, CheckingAccount Warning, low CheckingAccount 2: balance: -900 overdraft limit: 2100, Account , SavingsAccount 2, ', function() {
-      bank.addAccount();
-      bank.addSavingsAccount(2);
-      assert.equal(bank.endOfMonth(), 'Account , SavingsAccount 12, CheckingAccount Warning, low CheckingAccount 2: balance: -900 overdraft limit: 2100, Account , SavingsAccount 2, ');
+      (bank.getAccounts())[1].deposit(3000);
+      (bank.getAccounts())[2].withdraw(900);
+      assert.equal(bank.endOfMonth(), 'Account , SavingsAccount 12, CheckingAccount Warning, low CheckingAccount 2: balance: -900 overdraft limit: 2100, ');
     });
   });
 }); 
