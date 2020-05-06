@@ -1,5 +1,6 @@
 let savingsAccount = new SavingsAccount(12,1);
 let checkingAccount = new CheckingAccount(3000,2);
+let bank = new Bank();
 
 describe('Savings Account', function() {
   describe('Deposit', function() {
@@ -30,8 +31,17 @@ describe('Overdraft Account', function() {
 describe('Overdraft Account', function() {
   describe('Withdraw method', function() {
     it('Overdraft balance should be 2100 after withdrawing 900', function() {
-      checkingAccount.withdraw(900)
+      checkingAccount.withdraw(900);
       assert.equal(checkingAccount.getOverdraft(), 2100);
+    });
+  });
+}); 
+
+describe('Bank Class', function() {
+  describe('AddAccount', function() {
+    it('Should print all accounts', function() {
+      bank.addAccount();
+      assert.equal(bank.accountReport(), 'Account 0: balance 0\nSavingsAccount 1: balance 0 Interest 2\n');
     });
   });
 }); 
