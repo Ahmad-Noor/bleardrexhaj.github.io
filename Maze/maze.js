@@ -1,12 +1,11 @@
 $(document).ready(function() {
     var boundary = 0;
-    var lost = false;
     var start = false;
     $(document).mousemove(function() {
-        if ((!$("#maze:hover").length != 0 && start) || ($(".boundary:hover").length != 0 && !lost && start)) {
+        if ((!$("#maze:hover").length != 0 && start) || ($(".boundary:hover").length != 0 && start)) {
             $(".boundary").addClass("youlose");
             boundary++;
-            lost = true;
+            start = false;
             $("#status").text("You Lose!");
         }
     });
@@ -19,7 +18,6 @@ $(document).ready(function() {
     $(document).keypress(function(x) {
         if (x.keyCode == "115") {
             $(".boundary").removeClass("youlose");
-            lost = false;
             start = true;
             boundary = 0;
             $("#status").text("Click the 'S' to begin.");
@@ -27,7 +25,6 @@ $(document).ready(function() {
     });
     $("#start").click(function(x) {
         $(".boundary").removeClass("youlose");
-        lost = false;
         start = true;
         boundary = 0;
         $("#status").text("Click the 'S' to begin.");
