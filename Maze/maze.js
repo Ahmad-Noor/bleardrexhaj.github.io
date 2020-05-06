@@ -3,7 +3,7 @@ $(document).ready(function() {
     var lost = false;
     var start = false;
     $(document).mousemove(function() {
-        if ((!$("#maze:hover").length != 0 && start) || ($(".boundary:hover").length != 0 && !lost)) {
+        if ((!$("#maze:hover").length != 0 && start) || ($(".boundary:hover").length != 0 && !lost && start)) {
             $(".boundary").addClass("youlose");
             boundary++;
             lost = true;
