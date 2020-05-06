@@ -1,3 +1,4 @@
+"use strict";
 class Clock {
     constructor(template) {
         this.template = template;
