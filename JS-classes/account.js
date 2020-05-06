@@ -35,6 +35,13 @@ class Account {
     }
 
     /**
+     * Sets balance
+     */
+    setBalance(balance) {
+        this._balance = balance;
+    }
+
+    /**
      * Method to add money into the account
      * 
      * @param {number} amount money to be deposited into the account 
@@ -71,5 +78,11 @@ class Account {
      */
     toString() {
         return "Account " + this._number + ": balance " + this._balance;
+    }
+    /**
+     * Method for calling each main method at the end of the month
+     */
+    endOfMonth(){
+        return "";
     }
 }

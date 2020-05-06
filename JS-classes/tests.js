@@ -48,7 +48,7 @@ describe('Bank Class', function() {
 describe('Bank Class', function() {
   describe('AddSavingsAccount', function() {
     it('Should expect 1 as the second Number of the addSavingsAccount function', function() {
-      assert.equal(bank.addSavingsAccount(), 1);
+      assert.equal(bank.addSavingsAccount(12), 1);
     });
   });
 }); 
@@ -56,7 +56,17 @@ describe('Bank Class', function() {
 describe('Bank Class', function() {
   describe('AddCheckingAccount', function() {
     it('Should expect 2 as the second Number of the AddCheckingAccount function', function() {
-      assert.equal(bank.addCheckingAccount(), 2);
+      assert.equal(bank.addCheckingAccount(3000), 2);
+    });
+  });
+}); 
+
+describe('Bank Class', function() {
+  describe('End of the month', function() {
+    it('Should expect Account , SavingsAccount 12, CheckingAccount Warning, low CheckingAccount 2: balance: -900 overdraft limit: 2100, Account , SavingsAccount 2, ', function() {
+      bank.addAccount();
+      bank.addSavingsAccount(2);
+      assert.equal(bank.endOfMonth(), 'Account , SavingsAccount 12, CheckingAccount Warning, low CheckingAccount 2: balance: -900 overdraft limit: 2100, Account , SavingsAccount 2, ');
     });
   });
 }); 
