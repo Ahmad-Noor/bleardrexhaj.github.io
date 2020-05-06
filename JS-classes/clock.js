@@ -15,7 +15,7 @@ class Clock {
         let secs = date.getSeconds();
         if (secs < 10) secs = '0' + secs;
         let output = this.template.replace('h', hours).replace('m', mins).replace('s', secs);
-        console.log(output);
+        document.getElementById('timer').value = output;
         this.tick +=1;
     }
     stop() {
@@ -27,6 +27,3 @@ class Clock {
         this.timer = setInterval(() => this.render(), 1000);
     }
 }
-
-let clock = new Clock("h:m:s");
-clock.start();

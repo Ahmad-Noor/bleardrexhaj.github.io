@@ -39,9 +39,29 @@ describe('Overdraft Account', function() {
 
 describe('Bank Class', function() {
   describe('AddAccount', function() {
-    it('Should print all accounts', function() {
-      bank.addAccount();
-      assert.equal(bank.accountReport(), 'Account 0: balance 0\nSavingsAccount 1: balance 0 Interest 2\n');
+    it('Should expect 0 as the first Number of the AddAccount function', function() {
+      assert.equal(bank.addAccount(), 0);
+    });
+  });
+});
+
+describe('Bank Class', function() {
+  describe('AddSavingsAccount', function() {
+    it('Should expect 1 as the second Number of the addSavingsAccount function', function() {
+      assert.equal(bank.addSavingsAccount(), 1);
     });
   });
 }); 
+
+describe('Bank Class', function() {
+  describe('AddCheckingAccount', function() {
+    it('Should expect 2 as the second Number of the AddCheckingAccount function', function() {
+      assert.equal(bank.addCheckingAccount(), 2);
+    });
+  });
+}); 
+
+document.getElementById("timerbtn").addEventListener("click", function(){
+  let clock = new Clock("h:m:s");
+  clock.start();
+});

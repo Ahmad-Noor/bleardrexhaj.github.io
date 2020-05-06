@@ -2,10 +2,6 @@
 <html lang="en">
 <head>
 	<title>JS Bank Account</title>
-	<script src="account.js"></script>
-	<script src="savingsaccount.js"></script>
-    <script src="checkingaccount.js"></script>
-    <script src="bank.js"></script>
 	<!-- add mocha css, to show results -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
     <!-- add mocha framework code -->
@@ -19,11 +15,21 @@
         // chai has a lot of stuff, let's make assert global
         let assert = chai.assert;
     </script>
-    <script src="tests.js"></script>
 </head>
 <body>
-	<div id="mocha"></div>
-
-	<script>mocha.run();</script>
+	<div id="mocha">
+        <label>Timer</label>
+        <input type="text" name="timer" id="timer" />   
+        <button id="timerbtn">Start Timer!</button>
+        <input type="text" name="defer" id="defer" value="value appear after 6 seconds"/>
+    </div>
+    <script src="account.js"></script>
+    <script src="savingsaccount.js"></script>
+    <script src="checkingaccount.js"></script>
+    <script src="bank.js"></script>
+    <script src="clock.js"></script>
+    <script src="defer.js"></script>
+    <script src="tests.js"></script>
+    <script>mocha.run();</script>
 </body>
 </html>
